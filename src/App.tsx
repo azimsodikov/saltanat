@@ -30,20 +30,21 @@ function App() {
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden bg-dark text-dark-text">
       {/* Search Bar */}
-      <div className="absolute top-4 left-4 right-4 z-10">
+      <div className="absolute top-4 left-4 right-4 z-10 flex justify-center">
         <input
           type="text"
           placeholder="Search properties..."
           value={searchQuery}
           onChange={handleSearch}
-          className="w-full p-3 rounded-lg shadow-md bg-dark-card text-dark-text placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-accent"
+          className="w-full max-w-lg p-3 rounded-lg shadow-md bg-dark-card text-dark-text placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-dark-accent"
         />
       </div>
 
       {/* Map or List View */}
-      <div className="flex-1 relative">
+      <div className={`flex-1 relative ${isListView ? 'pt-20' : ''}`}> {/* Add padding only for list view */}
         {isListView ? (
-          <div className="absolute inset-0 overflow-y-auto p-4 space-y-4">
+          <div
+            className="absolute inset-x-0 bottom-0 top-20 overflow-y-auto px-4 space-y-4 bg-transparent"> {/* Transparent background */}
             {filteredProperties.map((property) => (
               <div
                 key={property.id}
