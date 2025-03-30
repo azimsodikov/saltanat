@@ -24,7 +24,7 @@ export const mockProperties: Property[] = [
     area_sqm: 250,
     latitude: 41.3032,
     longitude: 69.2598,
-    image_url: '/property_1.webp',
+    image_url: '/saltanat/property_1.webp',
     description: 'Beautifully updated 4-bedroom home with modern finishes, spacious living areas, and a large backyard.',
     priceHistory: [
       { date: '2023-01-01', price: 1150000 },
@@ -48,7 +48,7 @@ export const mockProperties: Property[] = [
     area_sqm: 180,
     latitude: 41.3045,
     longitude: 69.2601,
-    image_url: '/property_2.webp',
+    image_url: '/saltanat/property_2.webp',
     description: 'A stunning apartment with breathtaking views, modern amenities, and a prime location.',
     priceHistory: [
       { date: '2023-01-01', price: 830000 },
@@ -74,7 +74,7 @@ export const mockProperties: Property[] = [
       area_sqm: Math.floor(Math.random() * 200 + 50), // Random area between 50 and 250 sqm
       latitude,
       longitude,
-      image_url: `/property_${(i % 2) + 1}.webp`, // Alternate between property_1.jpg and property_2.jpg
+      image_url: `/saltanat/property_${(i % 2) + 1}.webp`, // Alternate between property_1.webp and property_2.webp
       description: `This is a description for Property ${i + 3}. It is located in Tashkent and has modern amenities.`,
       priceHistory: [
         { date: '2023-01-01', price: Math.floor(Math.random() * 100000 + 50000) },
