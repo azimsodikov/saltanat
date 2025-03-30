@@ -90,7 +90,7 @@ function App() {
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-dark-card text-dark-text p-3 rounded-full shadow-md z-20 flex items-center justify-center"
       >
         <img
-          src={isListView ? '/saltanat/map-icon.svg' : '/saltanat/list-icon.svg'}
+          src={isListView ? '/saltanat/assets/icons/map-icon.svg' : '/saltanat/assets/icons/list-icon.svg'}
           alt={isListView ? 'Map View' : 'List View'}
           className="w-6 h-6 filter invert" // Apply filter to make icons white
         />

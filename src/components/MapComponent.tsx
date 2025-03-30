@@ -5,7 +5,7 @@ import { Property } from '../types';
 
 // Custom white marker icon
 const WhiteIcon = L.icon({
-  iconUrl: '/saltanat/white-pin.svg', // Use a white pin icon
+  iconUrl: '/assets/icons/white-pin.svg', // Updated path for the white pin icon
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -47,7 +47,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ properties, onSelectPropert
       className: 'custom-marker', // Custom class for styling
       html: `
         <div class="flex items-center justify-center bg-purple-600 text-white rounded-full px-1 py-0.5 shadow-md">
-          <img src="/saltanat/home-icon.svg" alt="Home Icon" class="w-2.5 h-2.5 mr-1" style="filter: invert(1);" />
+          <img src="/saltanat/assets/icons/home-icon.svg" alt="Home Icon" class="w-2.5 h-2.5 mr-1" style="filter: invert(1);" />
           <span class="text-xs font-bold">${formatPrice(price)}</span>
         </div>
       `,
