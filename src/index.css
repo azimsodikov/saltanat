@@ -78,3 +78,54 @@ body {
   height: 0.625rem;
   margin-right: 0.2rem; /* Space between icon and text */
 }
+
+/* Slider Styles */
+.slick-slider {
+  height: 100%;
+}
+
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+/* Custom dots styling */
+.custom-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  z-index: 20;
+}
+
+.custom-dots li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.custom-dots li button {
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.custom-dots li.slick-active button {
+  background: white;
+}
+
+.custom-dots li button:before {
+  display: none;
+}
