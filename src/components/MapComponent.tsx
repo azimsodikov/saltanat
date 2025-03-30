@@ -47,7 +47,7 @@ const MapComponent: React.FC<MapComponentProps> = ({ properties, onSelectPropert
       className: 'custom-marker', // Custom class for styling
       html: `
         <div class="flex items-center justify-center bg-purple-600 text-white rounded-full px-1 py-0.5 shadow-md">
-          <img src="/saltanat/home-icon.svg" alt="Home Icon" class="w-2.5 h-2.5 mr-1" />
+          <img src="/saltanat/home-icon.svg" alt="Home Icon" class="w-2.5 h-2.5 mr-1" style="filter: invert(1);" />
           <span class="text-xs font-bold">${formatPrice(price)}</span>
         </div>
       `,
@@ -61,6 +61,8 @@ const MapComponent: React.FC<MapComponentProps> = ({ properties, onSelectPropert
       center={userLocation}
       zoom={initialZoom}
       scrollWheelZoom={true}
+      zoomControl={false} // Disable the default zoom control
+      attributionControl={false} // Disable the attribution control
       style={{ height: '100%', width: '100%' }}
       className="z-0 rounded-lg"
     >

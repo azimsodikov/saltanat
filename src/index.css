@@ -65,7 +65,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #6b46c1; /* Purple background */
   color: #ffffff; /* White text */
   border-radius: 9999px; /* Fully rounded */
   box-shadow: none; /* Remove any shadow or backdrop */

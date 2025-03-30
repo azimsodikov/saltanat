@@ -82,7 +82,10 @@ function App() {
 
       {/* Toggle Button for List/Map View */}
       <button
-        onClick={() => setIsListView(!isListView)}
+        onClick={() => {
+          setIsListView(!isListView);
+          setSelectedProperty(null); // Close details view when switching views
+        }}
         className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-dark-card text-dark-text p-3 rounded-full shadow-md z-20 flex items-center justify-center"
       >
         <img
