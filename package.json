@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "vite build && git init dist && cd dist && git checkout -b gh-pages && git add . && git commit -m 'Deploy to GitHub Pages' && git push --force git@github.com:azimsodikov/saltanat.git gh-pages && cd .."
+    "deploy": "rm -rf dist && vite build && cd dist && git init && git remote add origin git@github.com:azimsodikov/saltanat.git && git checkout -B gh-pages && git add . && git commit -m 'Deploy to GitHub Pages' && git push --force origin gh-pages && cd .."
   },
   "dependencies": {
     "leaflet": "^1.9.4",
