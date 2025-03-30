@@ -1,0 +1,81 @@
+/* Optional: Keep Leaflet CSS import here if preferred over index.html link */
+/* @import 'leaflet/dist/leaflet.css'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure map container has a defined height */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  z-index: 0; /* Ensure map is behind modals/popups if needed later */
+}
+
+/* Basic body styling */
+body {
+  @apply font-sans antialiased text-gray-800;
+  margin: 0; /* Ensure no default body margin */
+  overflow: hidden; /* Prevent body scroll */
+}
+
+/* Custom scrollbar styles (optional, Webkit browsers) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a8a8a8; /* Thumb color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7a7a7a; /* Thumb color on hover */
+}
+
+/* Hide scrollbar for elements with overflow-y-auto */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.scrollbar-hide {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+/* Dark-themed popup */
+.leaflet-popup-content-wrapper {
+  background-color: #1E1E1E; /* Match the dark card color */
+  color: #FFFFFF; /* White text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-tip {
+  background-color: #1E1E1E; /* Match the popup background */
+}
+
+/* Custom marker styles */
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6b46c1; /* Purple background */
+  color: #ffffff; /* White text */
+  border-radius: 9999px; /* Fully rounded */
+  box-shadow: none; /* Remove any shadow or backdrop */
+  padding: 0.1rem 0.3rem; /* Smaller padding for the marker */
+  font-size: 0.65rem; /* Smaller text size */
+  font-weight: bold; /* Bold text */
+}
+
+.custom-marker img {
+  width: 0.625rem; /* Smaller icon size */
+  height: 0.625rem;
+  margin-right: 0.2rem; /* Space between icon and text */
+}
